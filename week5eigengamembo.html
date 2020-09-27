@@ -1,0 +1,225 @@
+<html> 
+<body>
+<script>
+//Xander Briem
+//Software developer
+
+
+//Informatie
+var info;
+
+//Als je kiest om voor het wapen te kiezen
+var wapen;
+
+//Als je kiest om voor het raam te gaan
+var raamvragen;
+var raambreken;
+
+//Als je kiest om de spullen te onderzoeken
+var papiervraag1;
+var papiervraag2;
+var papiervraag3;
+
+
+
+
+//Informatie over waarover het gaat.
+alert("Je bent ontvoerd. Je zit in een kamer op een stoel en weet dat hij zo snel mogelijk terug komt. Wat ga je doen?");
+
+info = prompt("1 Je zoekt een wapen. 2 Je zoekt naar een raam. 3 Je onderzoekt de spullen die in de kamer staan.");
+
+
+//Als je hebt gekozen om een wapen te zoeken
+if (info == 1){
+
+	while(true){
+
+		wapen = prompt("Je hebt geen wapen gevonden, en je hoort de ontvoerder beneden. Wat is je volgende plan? 1 Je roept de ontvoerder. 2 Je zoekt naar een raam.");
+
+		//Als je hebt gekozen om de ontvoerder te roepen
+		if(wapen == 1){
+				alert("De ontvoerder hoort je en komt snel naar boven. Hij ziet dat je weer wakker bent en schiet jou dood.");
+				document.write("Game over");  //Op het hoofdscherm staat gameover
+				break
+		}
+
+		//Als je hebt gekozen om te zoeken naar een raam	  
+		else if(wapen == 2){
+		raamvragen = prompt("Je hebt een raam gevonden maar die is opslot. Je hebt nog geen spullen gezocht om het open te maken. Wat ga je doen? 1 Je breekt het raam open. 2 Je gaat opzoek naar spullen om het raam open te maken.");
+		}
+
+
+		//Als je kiest om het raam open te breken
+		if(raamvragen == 1){
+
+			raambreken = prompt("Je hebt het raam opengebroken met de stoel waar je op zat. Je dacht dat je niet zo hoog zat, maar waar je zat opgesloten was op een boerderij op het platteland. Je kijkt naar beneden en je ziet dat het te hoog is om te springen zonder botten te breken. Je hoort dat hij naar boven gaat om te kijken wat hij hoorde. Wat ga je doen? 1 Je pakt de stoel, en bereid je voor om hem daarmee bewusteloos te slaan. 2 Je springt naar beneden.");
+
+			//Als je kiest om te proberen de ontvoerder bewusteloos te slaan
+			if(raambreken == 1){
+			alert("De ontvoerder komt naar binnen en je staat net op het punt om hem bewusteloos te slaan. Opeens zie je dat de ontvoerder met meer mensen zijn en dat ze allemaal wapens hebben. Je weet dat je geen kans hebt. Je probeert nog om door het raam te springen, maar het is al te laat. De ontvoerders doden je.");
+			document.write("Game over");  //Op het hoofdscherm staat gameover
+			break
+			}
+
+			//Als je kiest om naar beneden te springen
+			else if(raambreken == 2){
+			alert("Je springt door het raam, en je valt verkeerd. Je voelt dat je 1 voet gebroken hebt maar je weet dat je geen kans hebt voor een ander plan. Opeens zie je dat er geen weg is om een auto tegen te houden. De pijn in je voet wordt steeds erger en je weet dat je niet weg kan rennen. Opeens hoor je dat de ontvoerder naar buiten komt. Zijn wapen laad, en jou neerschiet.");
+			document.write("Game over");  //Op het hoofdscherm staat gameover
+			break
+			}
+		}
+
+		//Als je kiest om omzoek te gaan naar spullen om het raam open te breken
+		else if(raamvragen == 2){
+
+			alert("Je hebt de spullen bekeken in de kamer om het raam open te maken, en de spullen die je gevonden hebt zijn: handboeien, schroevendraaier, touw, veel boeken, benzine en een aansteker.");
+			alert("Je hebt gezien dat je het raam open kan schroeven. Je weet ook dat je misschien het touw kan gebruiken om omlaag te gaan als je hoog zit.");
+
+			spullenvoorraam = prompt("Je kan nog niet zien hoe hoog je zit omdat het te donker is. Ga je het raam openmaken met de schroevendraaier en het touw gebruiken om naar beneden te gaan, zonder dat je weet hoe hoog je bent en waar je zit? Typ 'wachten tot het licht is' om te wachten. Typ 'gelijk gaan' om gelijk het raam open te maken zonder dat je weet waar, en hoe hoog je zit.");
+
+			//Als je kiest om te wachten tot het licht is om te zien waar en hoe hoog je zit
+			var spullenvoorraam = spullenvoorraam.toLowerCase();//Veranderd je antwoord in kleine letters
+			if(spullenvoorraam == 'wachten tot het licht is'){
+			alert("Je wacht al een paar uur maar het is nog geen licht. Opeens hoor je de ontvoerder naar boven gaan. Je blijft stil zitten en kijkt wat er gebeurd. De ontvoerder komt binnen ziet jou daar zitten, ziet dat de spullen verschuifd zijn, en weet wat er gaande is. Hij weet dat je hebt geprobeerd te ontsnappen. Hij schiet jou dood.");
+			document.write("Game over");  //Op het hoofdscherm staat gameover
+			break
+			}
+
+			//Als je kiest om gelijk te proberen om naar buiten te gaan via het raam
+			else if(spullenvoorraam == 'gelijk gaan'){
+			alert("Je pakt de schroevendraaier. Je schroeft het raam open, en legt het stil neer op de grond. Je pakt het touw, en zet het touw vast aan je stoel in de kamer. Je gaat naar beneden met het touw maar opeens knapt het touw. Je valt naar beneden en komt op de grond terecht. Toen pas zag je dat je op de zolder zat van een boerderij. De ontvoerder hoort de klap rent naar buiten, neemt jou mee naar binnen, en schiet jou dood.");
+			document.write("Game over");  //Op het hoofdscherm staat gameover
+			break
+			}
+		}
+	}
+}
+
+
+
+//Als je kiest om gelijk te zoeken naar een raam
+else if(info == 2){
+
+	while(true){
+		raamvragen = prompt("Je hebt een raam gevonden, maar die is opslot. Je hebt nog geen spullen gezocht om het open te maken. Wat ga je doen? 1 Je breekt het raam open. 2 Je gaat opzoek naar spullen om het raam open te maken.");
+
+		//Als je kiest om het raam open te breken kom je hier
+		if(raamvragen == 1){
+			raambreken = prompt("Je hebt het raam opengebroken met de stoel waar je op zat. Je dacht dat je niet zo hoog zat, maar waar je zat opgesloten was op een boerderij op het platteland. Je kijkt naar beneden en je ziet dat het te hoog is om te springen zonder botten te breken. Je hoort dat hij naar boven gaat om te kijken wat hij hoorde. Wat ga je doen? 1 Je pakt de stoel, en bereid je voor om hem daarmee bewusteloos te slaan. 2 Je springt naar beneden.");
+
+			//Als je kiest om de stoel te pakken en hem bewusteloos proberen te slaan
+			if(raambreken == 1){
+			alert("De ontvoerder komt naar binnen en je staat net op het punt om hem bewusteloos te slaan. Opeens zie je dat de ontvoerder met meer mensen zijn en dat ze allemaal wapens hebben. Je weet dat je geen kans hebt. Je probeert nog om door het raam te springen, maar het is al te laat. De ontvoerders doden je.");
+			document.write("Game over"); //Op het hoofdscherm staat gameover
+			break
+			}
+
+			//Als je kiest om naar beneden te springen
+			else if(raambreken == 2){
+			alert("Je springt door het raam, en je valt verkeerd. Je voelt dat je 1 voet gebroken hebt maar je weet dat je geen kans hebt voor een ander plan. Opeens zie je dat er geen weg is om een auto tegen te houden. De pijn in je voet wordt steeds erger en je weet dat je niet weg kan rennen. Opeens hoor je dat de ontvoerder naar buiten komt. Zijn wapen laad, en jou neerschiet.");
+			document.write("Game over"); //Op het hoofdscherm staat gameover
+			break
+			}
+		}
+
+		//Als je kiest om opzoek te gaan om het raam open te maken kom je hier
+		else if(raamvragen == 2){
+			alert("Je hebt de spullen bekeken in de kamer om het raam open te maken, en de spullen die je gevonden hebt zijn: handboeien, schroevendraaier, touw, veel boeken, benzine en een aansteker.");
+			alert("Je hebt gezien dat je het raam open kan schroeven. Je weet ook dat je misschien het touw kan gebruiken om omlaag te gaan als je hoog zit.");
+
+			spullenvoorraam2 = prompt("Je kan nog niet zien hoe hoog je zit omdat het te donker is. Ga je het raam openmaken met de schroevendraaier en het touw gebruiken om naar beneden te gaan, zonder dat je weet hoe hoog je bent en waar je zit? Typ 'wachten tot het licht is' om te wachten. Typ 'gelijk gaan' om gelijk het raam open te maken zonder dat je weet waar, en hoe hoog je zit.");
+
+			//Als je wacht totdat het licht is om te kijken hoe hoog je zit
+			var spullenvoorraam2 = spullenvoorraam2.toLowerCase(); //Veranderd je antwoord in kleine letters
+			if(spullenvoorraam2 == 'wachten tot het licht is'){
+			alert("Je wacht al een paar uur maar het is nog geen licht. Opeens hoor je de ontvoerder naar boven gaan. Je blijft stil zitten en kijkt wat er gebeurd. De ontvoerder komt binnen ziet jou daar zitten, ziet dat de spullen verschuifd zijn, en weet wat er gaande is. Hij weet dat je hebt geprobeerd te ontsnappen. Hij schiet jou dood.");
+			document.write("Game over"); //Op het hoofdscherm staat gameover
+			break
+			}
+
+			//Als je kiest om gelijk het raam open te maken zonder dat je weet hoe hoog je zit
+			else if(spullenvoorraam2 == 'gelijk gaan'){
+			alert("Je pakt de schroevendraaier. Je schroeft het raam open, en legt het stil neer op de grond. Je pakt het touw, en zet het touw vast aan je stoel in de kamer. Je gaat naar beneden met het touw maar opeens knapt het touw. Je valt naar beneden en komt op de grond terecht. Toen pas zag je dat je op de zolder zat van een boerderij. De ontvoerder hoort de klap rent naar buiten, neemt jou mee naar binnen, en schiet jou dood.");
+			document.write("Game over"); //Op het hoofdscherm staat gameover
+			break
+			}
+		}
+	}
+}
+
+
+//Als je kiest om de spullen te onderzoeken in de kamer
+else if(info == 3){
+	alert("Je gaat opzoek naar spullen en de spullen die je gevonden hebt zijn: handboeien, schroevendraaier, touw, veel boeken, benzine, een aansteker en een sleutel.");
+	alert("Je weet niet waarvoor de sleutel is maar je ziet maar 1 deur. Je pakt de sleutel en stopt het in de deur. De deur gaat open en opeens sta je in een gang.");
+
+	while(true){
+
+		gangkeuze = prompt("Ga je wachten totdat de ontvoerder slaapt, of ga je voorzichtig door de gangen? Typ 'wachten' om te wachten totdat de ontvoerder slaapt. Typ 'voorzichtig door de gangen' om gelijk door de gangen te gaan.")
+
+        gangkeuze = gangkeuze.toLowerCase();
+		if(gangkeuze == 'wachten'){
+			alert("Je wacht totdat de ontvoerder slaapt. Wanneer je zeker weet dat hij slaapt ga je door de gang. Opeens hoor je een alarm. Je wist niet dat de ontvoerder een alarm had ingesteld wanneer hij ging slapen om te weten of je probeert te ontsnappen. De ontvoerder wordt wakker, gaat naar boven, en dood je.")
+			document.write("Game over");
+			break
+		}	
+
+		//Als je kiest om voorzichtig door de gangen te gaan
+		else if(gangkeuze == 'voorzichtig door de gangen'){
+			alert("Je loopt door de gangen en ziet allemaal papiertjes op de deuren en de uitgang is een kluisdeur. Je weet dat 1 van de deuren de trap naar beneden is. Dus elke deur openen gaat niet werken. Je leest de papiertjes en er staan allemaal sommen en vragen op. Waarschijnlijk is dit voor de kluisdeur om te openen. Waarschijnlijk als je een vraag fout beantwoord bij de kluis deur gaat er een alarm af. Dus wees voorzichtig! (Let op! De cijfers beginnen bij 1. Lager dan 1 kan je niet gaan.");
+
+			papiervraag1 = prompt("Je leest het eerste papiertje. Je ziet dat elke papiertje een som is. Vul in wat het eindantwoord is om door te gaan. Welke getal is kleiner dan π(pi)?");
+
+			//Als de persoon 3 of lager antwoord
+			if(papiervraag1 <= 3){
+			alert("Je loopt naar de kluis deur om het in te toetsen. De kleur wordt groen.");
+			}
+
+			//Als de persoon hoger dan 3 antwoord
+			if(papiervraag1 > 3){
+			alert("Je loopt naar de kluis deur om het in te toetsen. De kleur wordt rood. Er gaat een alarm af, en de ontvoerder komt naar boven. Je probeert nog te verstoppen in de andere kamers maar elke deur is dicht. De ontvoerder dood je.")
+			document.write("Game over"); //Op het hoofdscherm staat gameover
+			break
+			}
+
+			//De tweede vraag, als de persoon de eerste vraag hebt gehaald
+			papiervraag2 = prompt("Op het tweede papiertje staat de volgende vraag: wat is kleiner dan 403+(-8x40)-153+72");
+
+			//Als de persoon 2 of hoger invult
+			if(papiervraag2 >= 2){
+			alert("Je vult het antwoord in op het scherm. De kleur wordt rood. Er gaat een alarm af, en de ontvoerder komt naar boven. Je probeert nog te verstoppen in de andere kamers maar elke deur is dicht. De ontvoerder dood je");
+			document.write("Game over"); //Op het hoofdscherm staat gameover
+			break
+			}
+
+			//Als de persoon lager dan 2 invult
+			if(papiervraag2 < 2){
+			alert("Je vult 1 in op de kluis deur. De kleur wordt groen.");
+			}
+
+			//De derde vraag, als de persoon de eerste vraag hebt gehaald
+			papiervraag3 = prompt("Het derde papiertje is recht bij de deur naar beneden. De vraag is ook een stuk moeilijker. De volgende vraag staat erop: C+T-F=18 wat is dan: F+X-17=?");
+
+			//Als de persoon 14 invult
+			if(papiervraag3 == 14 ){
+			alert("Je vult 14 in op de kluis deur. De kleur wordt groen. De deur gaat open en je kan naar buiten. Je kijkt nog achter je en ziet niemand. Je rent naar buiten, en je gaat zover mogelijk wegrennen van de ontvoerder");
+			document.write("Je bent ontsnapt!"); //Op het hoofdscherm staat je bent ontsnapt!
+			break
+			}
+
+			//Als de persoon niet het getal 14 invult
+			else if(papiervraag3 != 14){
+			alert("Je vult het antwoord in op het scherm. De kleur wordt rood. Er gaat een alarm af, en de ontvoerder komt naar boven. Je probeert nog te verstoppen in de andere kamers maar elke deur is dicht. De ontvoerder dood je");
+			document.write("Game over"); //Op het hoofdscherm staat gameover
+			break
+			}
+		}
+	}
+}
+
+
+
+
+</script>
+</body>
+</html>
